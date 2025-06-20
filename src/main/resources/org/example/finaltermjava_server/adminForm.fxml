@@ -1,0 +1,92 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.chart.BarChart?>
+<?import javafx.scene.chart.CategoryAxis?>
+<?import javafx.scene.chart.NumberAxis?>
+<?import javafx.scene.chart.PieChart?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.Separator?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane prefHeight="845.0" prefWidth="1351.0" xmlns="http://javafx.com/javafx/23.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="org.example.finaltermjava_server.controller.AdminFormController">
+   <children>
+      <TableView fx:id="ticketTable" layoutX="333.0" layoutY="420.0" prefHeight="413.0" prefWidth="1008.0" stylesheets="@css/AdminForm.css">
+        <columns>
+          <TableColumn fx:id="col_name" minWidth="112.0" prefWidth="75.0" text="Username" />
+          <TableColumn fx:id="col_departure" minWidth="112.0" prefWidth="75.0" text="Departure time" />
+            <TableColumn fx:id="col_arrival" minWidth="112.0" prefWidth="75.0" text="Arrival time" />
+            <TableColumn fx:id="col_origin" minWidth="112.0" prefWidth="75.0" text="Origin" />
+            <TableColumn fx:id="col_destination" minWidth="112.0" prefWidth="75.0" text="Destination" />
+            <TableColumn fx:id="col_coach" minWidth="112.0" prefWidth="75.0" text="Coach" />
+            <TableColumn fx:id="col_seat" minWidth="112.0" prefWidth="75.0" text="Seat" />
+            <TableColumn fx:id="col_date" minWidth="112.0" prefWidth="75.0" text="Date" />
+            <TableColumn fx:id="col_price" minWidth="112.0" prefWidth="75.0" text="Price" />
+        </columns>
+      </TableView>
+      <Pane layoutX="14.0" layoutY="11.0" prefHeight="818.0" prefWidth="303.0" styleClass="border" stylesheets="@css/AdminForm.css">
+         <children>
+            <Label layoutX="22.0" layoutY="134.0" prefHeight="32.0" prefWidth="141.0" styleClass="label1" stylesheets="@css/AdminForm.css" text="Departure Time" />
+            <ComboBox fx:id="departure" layoutX="22.0" layoutY="188.0" prefHeight="28.0" prefWidth="257.0" stylesheets="@css/AdminForm.css" />
+            <Label layoutX="22.0" layoutY="241.0" prefHeight="32.0" prefWidth="112.0" styleClass="label1" stylesheets="@css/AdminForm.css" text="Arrival Time" />
+            <ComboBox fx:id="arrival" layoutX="22.0" layoutY="293.0" prefHeight="25.0" prefWidth="257.0" stylesheets="@css/AdminForm.css" />
+            <Label layoutX="22.0" layoutY="351.0" prefHeight="26.0" prefWidth="50.0" styleClass="label1" stylesheets="@css/AdminForm.css" text="Price" />
+            <TextField fx:id="price" layoutX="22.0" layoutY="391.0" prefHeight="25.0" prefWidth="257.0" promptText="Price" stylesheets="@css/AdminForm.css" />
+            <Label layoutX="22.0" layoutY="446.0" prefHeight="26.0" prefWidth="64.0" styleClass="label1" stylesheets="@css/AdminForm.css" text="Coach" />
+            <TextField fx:id="coach" layoutX="22.0" layoutY="489.0" prefHeight="25.0" prefWidth="257.0" promptText="Coach" stylesheets="@css/AdminForm.css" />
+            <Button fx:id="update" layoutX="22.0" layoutY="564.0" minWidth="112.0" mnemonicParsing="false" styleClass="btn" stylesheets="@css/AdminForm.css" text="Update" />
+            <Button fx:id="delete" layoutX="167.0" layoutY="564.0" minWidth="112.0" mnemonicParsing="false" styleClass="btn" stylesheets="@css/AdminForm.css" text="Delete" />
+            <Button fx:id="open_server" layoutX="22.0" layoutY="621.0" minWidth="112.0" mnemonicParsing="false" styleClass="btn" stylesheets="@css/AdminForm.css" text="Server" />
+            <Button fx:id="bill" layoutX="167.0" layoutY="621.0" minWidth="112.0" mnemonicParsing="false" styleClass="btn" stylesheets="@css/AdminForm.css" text="Bill" />
+            <ImageView fx:id="logout" fitHeight="41.0" fitWidth="32.0" layoutX="14.0" layoutY="772.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@Images/logout.png" />
+               </image>
+            </ImageView>
+            <Label layoutX="67.0" layoutY="772.0" prefHeight="32.0" prefWidth="80.0" text="Log Out">
+               <font>
+                  <Font name="System Bold" size="18.0" />
+               </font>
+            </Label>
+            <ImageView fx:id="admin_img" fitHeight="60.0" fitWidth="64.0" layoutX="22.0" layoutY="14.0" pickOnBounds="true" preserveRatio="true" />
+            <Label fx:id="admin_name" layoutX="129.0" layoutY="36.0" text="Label">
+               <font>
+                  <Font name="System Bold" size="18.0" />
+               </font>
+            </Label>
+            <ImageView fx:id="camera" fitHeight="32.0" fitWidth="24.0" layoutX="64.0" layoutY="53.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@Images/camera.png" />
+               </image>
+            </ImageView>
+            <ImageView fx:id="reload_icon" fitHeight="36.0" fitWidth="32.0" layoutX="257.0" layoutY="772.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@Images/reloading.png" />
+               </image>
+            </ImageView>
+         </children>
+      </Pane>
+      <Pane layoutX="333.0" layoutY="11.0" prefHeight="398.0" prefWidth="1008.0" styleClass="border" stylesheets="@css/AdminForm.css">
+         <children>
+            <BarChart fx:id="bar_chart" layoutX="309.0" layoutY="15.0" prefHeight="369.0" prefWidth="685.0">
+              <xAxis>
+                <CategoryAxis side="BOTTOM" />
+              </xAxis>
+              <yAxis>
+                <NumberAxis prefHeight="328.0" prefWidth="30.0" side="LEFT" />
+              </yAxis>
+            </BarChart>
+            <PieChart fx:id="pie_chart" layoutX="14.0" layoutY="25.0" prefHeight="337.0" prefWidth="303.0" />
+         </children>
+      </Pane>
+      <Separator layoutX="323.0" layoutY="21.0" orientation="VERTICAL" prefHeight="818.0" prefWidth="0.0" />
+   </children>
+</AnchorPane>

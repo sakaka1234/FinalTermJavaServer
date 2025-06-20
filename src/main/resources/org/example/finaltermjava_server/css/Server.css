@@ -1,0 +1,59 @@
+.listUser{
+
+   -fx-background-color: #63615f;
+
+           /* Bo góc nền */
+           -fx-background-radius: 40;
+
+           /* Nếu muốn bo cả viền: cần thêm màu viền */
+           -fx-border-color: transparent;
+           -fx-border-radius: 0;
+}
+.backgroundMain{
+    -fx-background-color : #4a4545;
+}
+.chat{
+   -fx-background-color: transparent; /* để nền trong suốt */
+
+       -fx-border-radius: 10;
+       -fx-border-color: #e6a58c; /* hoặc transparent nếu không cần viền */
+       -fx-padding: 5;
+}
+.footer{
+    -fx-padding: 5;
+
+        /* Màu nền */
+        -fx-background-color: #63615f;
+
+        /* Bo góc nền */
+        -fx-background-radius: 40;
+
+        /* Nếu muốn bo cả viền: cần thêm màu viền */
+        -fx-border-color: transparent;
+        -fx-border-radius: 0;
+}
+.custom-button {
+    -fx-background-color: transparent;
+    -fx-text-fill: white;
+    -fx-font-weight: bold;
+    -fx-font-size: 14px;
+    -fx-padding: 8 16;
+    -fx-background-radius: 20;
+    -fx-border-radius: 20;
+    -fx-border-width: 2;
+    -fx-border-color: #bfa8ff; /* tím nhẹ */
+    -fx-cursor: hand;
+}
+
+/* Hover: nền tím nhạt trong suốt */
+.custom-button:hover {
+    -fx-background-color: rgba(191, 168, 255, 0.1);
+}
+
+/* Pressed: nền tím đậm hơn */
+.custom-button:pressed {
+    -fx-background-color: rgba(191, 168, 255, 0.25);
+}
+
+
+

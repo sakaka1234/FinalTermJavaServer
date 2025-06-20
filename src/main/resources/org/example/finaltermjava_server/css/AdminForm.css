@@ -1,0 +1,115 @@
+.white {
+    -fx-background-color: #fff;
+    -fx-background-radius: 8px;
+}
+.btn {
+    -fx-background-color : linear-gradient(to bottom right, #0077b6, #023e8a);
+    -fx-text-fill: #fff;
+    -fx-font-size: 14px;
+    -fx-cursor: hand;
+    -fx-transition-duration : 1s;
+}
+.btn:hover {
+    -fx-transition-duration : 1s;
+    -fx-background-color: #ffffff;
+    -fx-border-color: #023e8a;
+    -fx-text-fill: #023e8a;
+
+}
+.border {
+    -fx-border-color: linear-gradient(to bottom right, #0077b6, #023e8a);
+        -fx-border-width: 1px;
+        -fx-border-radius: 8px;
+}
+.table-view {
+    -fx-padding: 0px;
+    -fx-background-color: transparent;
+    -fx-border-color: linear-gradient(to bottom right, #0077b6, #023e8a); /* xanh dương đậm */
+    -fx-border-radius: 8px;
+    -fx-border-width: 2px;
+}
+
+.table-view .column-header {
+    -fx-alignment: CENTER;
+}
+
+.table-view .column-header-background {
+    -fx-background-color: linear-gradient(to bottom right, #0077b6, #023e8a); /* header xanh dương đậm */
+    -fx-background-radius: 8px 8px 0px 0px;
+    -fx-background-inset: 0 0 0 0;
+}
+
+.table-view .column-header, .filter {
+    -fx-background-color: transparent;
+    -fx-size: 50px;
+}
+
+.table-view .column-header .label {
+    -fx-text-fill: white; /* chữ trắng */
+    -fx-font-family: Arial;
+    -fx-font-weight: bold;
+}
+/* Modern Dark Blue Gradient ComboBox */
+.combo-box {
+    -fx-background-color:linear-gradient(to bottom right, #0077b6, #023e8a);
+    -fx-background-radius: 8px;
+    -fx-border-color: #3b82f6;
+    -fx-border-radius: 8px;
+    -fx-border-width: 1px;
+    -fx-padding: 2px 10px;
+    -fx-font-size: 14px;
+    -fx-text-fill: white;
+    -fx-effect: dropshadow(gaussian, rgba(0,0,0,0.2), 4, 0, 0, 2);
+    -fx-fill: white;
+}
+
+
+
+
+/* ComboBox khi focus */
+.combo-box:focused {
+    -fx-background-color: linear-gradient(to bottom, #3b82f6, #334155);
+    -fx-border-color: #93c5fd;
+    -fx-border-width: 2px;
+    -fx-effect: dropshadow(gaussian, rgba(59, 130, 246, 0.4), 6, 0, 0, 0);
+}
+
+/* Nút mũi tên dropdown */
+.combo-box .arrow-button {
+    -fx-background-color: transparent;
+    -fx-background-radius: 0 8px 8px 0;
+    -fx-padding: 0 8px;
+}
+
+.combo-box .arrow-button .arrow {
+    -fx-background-color: white;
+    -fx-shape: "M 0 0 L 4 4 L 8 0 Z";
+    -fx-scale-shape: true;
+    -fx-effect: dropshadow(gaussian, rgba(0,0,0,0.3), 1, 0, 0, 1);
+}
+
+.text-field {
+    -fx-background-color: white;
+    -fx-background-radius: 20px;
+    -fx-border-color: linear-gradient(to bottom right, #0077b6, #023e8a);
+    -fx-border-radius: 20px;
+    -fx-border-width: 1.5px;
+    -fx-padding: 8px 12px;
+    -fx-font-family: "Century Gothic", "Verdana", sans-serif;
+    -fx-font-size: 13px;
+}
+
+.text-field:focused {
+    -fx-background-color: #fcf8ff;
+    -fx-effect: dropshadow(gaussian, rgba(158, 32, 160, 0.3), 8, 0.1, 0, 0);
+}
+.label1 {
+    -fx-font-family: "Century Gothic", "Calibri", sans-serif;
+    -fx-font-size: 18px;
+    -fx-font-weight: normal;
+    -fx-text-fill: #555555;
+    -fx-border-color: transparent transparent #0077b6 transparent;
+    -fx-border-width: 0 0 1px 0;
+    -fx-padding: 0 0 2px 0;
+    -fx-opacity: 0.9;
+}

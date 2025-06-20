@@ -1,0 +1,43 @@
+/*ADMIN*/
+.bg-train-admin {
+    -fx-background-color: white;
+    -fx-background-repeat: no-repeat;
+    -fx-background-size: cover;
+    -fx-background-position: center center;
+}
+
+.right-bg-train-admin{
+    -fx-background-color: linear-gradient(to bottom right, #00b4d8, #0077b6);
+}
+
+.text-field-admin{
+    -fx-background-color: #ffffff;
+        -fx-text-fill: #333333;
+        -fx-font-size: 14px;
+        -fx-background-radius: 8px;
+        -fx-border-radius: 8px;
+        -fx-border-color: #00b4d8;
+        -fx-border-width: 2px;
+        -fx-padding: 5px 10px;
+}
+.text-field-admin:focused{
+     -fx-border-color: #0077b6;
+        -fx-effect: dropshadow(three-pass-box, rgba(0, 183, 255, 0.3), 10, 0, 0, 0);
+}
+.btn-register{
+    -fx-background-color: linear-gradient(to right, #2193b0, #6dd5ed); /* gradient blue */
+        -fx-text-fill: white;
+        -fx-font-size: 17px;
+        -fx-font-weight: bold;
+        -fx-background-radius: 10;
+        -fx-border-radius: 10;
+        -fx-padding: 5 20;
+        -fx-cursor: hand;
+        -fx-effect: dropshadow(three-pass-box, rgba(0, 0, 0, 0.1), 5, 0, 0, 2);
+        -fx-border-color: transparent;
+        -fx-transition: all 0.7s ease-in-out;
+}
+.btn-register:hover{
+    -fx-background-color: linear-gradient(to right, #6dd5ed, #2193b0); /* reverse gradient */
+
+}
