@@ -4,6 +4,7 @@ import javafx.beans.property.SimpleIntegerProperty;
 import javafx.beans.property.SimpleStringProperty;
 
 public class Ticket {
+    private final SimpleStringProperty ticketId;
     private final SimpleStringProperty username;
     private final SimpleStringProperty departure;
     private final SimpleStringProperty arrival;
@@ -13,10 +14,12 @@ public class Ticket {
     private final SimpleStringProperty seat;
     private final SimpleStringProperty date;
     private final SimpleIntegerProperty price;
+    private final SimpleStringProperty status;
 
     // Constructor with String parameters (easier to use)
-    public Ticket(String username, String departure, String arrival, String origin,
-                  String destination, String coach, String seat, String date, int price) {
+    public Ticket(String ticketId, String username, String departure, String arrival, String origin,
+                  String destination, String coach, String seat, String date, int price, String status) {
+        this.ticketId = new SimpleStringProperty(ticketId);
         this.username = new SimpleStringProperty(username);
         this.departure = new SimpleStringProperty(departure);
         this.arrival = new SimpleStringProperty(arrival);
@@ -26,12 +29,14 @@ public class Ticket {
         this.seat = new SimpleStringProperty(seat);
         this.date = new SimpleStringProperty(date);
         this.price = new SimpleIntegerProperty(price);
+        this.status = new SimpleStringProperty(status);
     }
 
     // Constructor with Property parameters (for backward compatibility)
-    public Ticket(SimpleStringProperty username, SimpleStringProperty departure, SimpleStringProperty arrival,
+    public Ticket(SimpleStringProperty ticketId, SimpleStringProperty username, SimpleStringProperty departure, SimpleStringProperty arrival,
                   SimpleStringProperty origin, SimpleStringProperty destination, SimpleStringProperty coach,
-                  SimpleStringProperty seat, SimpleStringProperty date, SimpleIntegerProperty price) {
+                  SimpleStringProperty seat, SimpleStringProperty date, SimpleIntegerProperty price, SimpleStringProperty status) {
+        this.ticketId = ticketId;
         this.username = username;
         this.departure = departure;
         this.arrival = arrival;
@@ -41,6 +46,15 @@ public class Ticket {
         this.seat = seat;
         this.date = date;
         this.price = price;
+        this.status = status;
+    }
+
+    public String getTicketId() {
+        return ticketId.get();
+    }
+
+    public SimpleStringProperty ticketIdProperty() {
+        return ticketId;
     }
 
     public String getUsername() {
@@ -113,5 +127,13 @@ public class Ticket {
 
     public SimpleIntegerProperty priceProperty() {
         return price;
+    }
+
+    public String getStatus() {
+        return status.get();
+    }
+
+    public SimpleStringProperty statusProperty() {
+        return status;
     }
 }
